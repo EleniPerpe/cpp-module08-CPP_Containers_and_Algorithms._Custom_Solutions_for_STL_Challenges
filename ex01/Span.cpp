@@ -6,7 +6,7 @@
 /*   By: eleni <eleni@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 14:36:30 by eleni             #+#    #+#             */
-/*   Updated: 2025/01/21 18:52:46 by eleni            ###   ########.fr       */
+/*   Updated: 2025/01/21 19:21:16 by eleni            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,8 @@ int Span::longestSpan()
     
     return (sorted.back() - sorted.front());
 }
+
+
 
 const char* Span::maxCapacityException::what() const throw()
 {

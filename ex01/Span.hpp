@@ -6,7 +6,7 @@
 /*   By: eleni <eleni@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 14:36:34 by eleni             #+#    #+#             */
-/*   Updated: 2025/01/21 18:53:13 by eleni            ###   ########.fr       */
+/*   Updated: 2025/01/21 19:37:00 by eleni            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,18 @@ class Span
         int longestSpan();
 
         int getNumber(int i);
+
+        template <typename InputIterator>
+        void addNumbers(InputIterator begin, InputIterator end) 
+        {
+            size_t distance = std::distance(begin, end);
+
+            if (_intVector.size() + distance > _maximumIntegers) {
+                throw maxCapacityException();
+        }
+
+         _intVector.insert(_intVector.end(), begin, end);
+        }
         
         class maxCapacityException : public std::exception
         {
