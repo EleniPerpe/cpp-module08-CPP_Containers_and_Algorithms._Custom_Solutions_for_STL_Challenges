@@ -6,7 +6,7 @@
 /*   By: eleni <eleni@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 14:36:30 by eleni             #+#    #+#             */
-/*   Updated: 2025/01/21 16:02:34 by eleni            ###   ########.fr       */
+/*   Updated: 2025/01/21 18:52:46 by eleni            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,11 @@ void Span::addNumber(int num)
     if (this->_maximumIntegers == this->_intVector.size())
         throw maxCapacityException();
     _intVector.push_back(num);
+}
+
+int Span::getNumber(int i)
+{
+    return this->_intVector[i];
 }
 
 int Span::shortestSpan()
