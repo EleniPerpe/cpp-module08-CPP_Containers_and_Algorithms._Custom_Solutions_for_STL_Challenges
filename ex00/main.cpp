@@ -6,7 +6,7 @@
 /*   By: eleni <eleni@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 11:03:45 by eleni             #+#    #+#             */
-/*   Updated: 2025/01/21 12:21:46 by eleni            ###   ########.fr       */
+/*   Updated: 2025/01/21 14:33:54 by eleni            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int main()
         //std::cout << "Found: " << easyfind(lst, 45) << std::endl;
         //std::cout << "Found: " << easyfind(vec, 8) << std::endl;
         std::cout << "Found: " << easyfind(vec, 3) << std::endl;
-        std::cout << "Found: " << easyfind(arr, 20) << std::endl;
+      	std::cout << "Found: " << easyfind(arr, 20) << std::endl;
         std::cout << "Found: " << easyfind(arr, 23) << std::endl;
     }
     
