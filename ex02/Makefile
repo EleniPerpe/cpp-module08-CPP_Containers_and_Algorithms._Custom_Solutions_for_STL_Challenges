@@ -1,11 +1,11 @@
 # Source Files
-SRCS = main.cpp Span.cpp
+SRCS = main.cpp
 
 # Object Files
 OBJS = $(SRCS:.cpp=.o)
 
 # Name Of The Compiled Program
-NAME = span
+NAME = stack
 
 # Compilation Program
 CXX = c++

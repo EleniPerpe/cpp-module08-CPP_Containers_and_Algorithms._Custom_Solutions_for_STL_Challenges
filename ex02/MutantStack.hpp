@@ -6,7 +6,7 @@
 /*   By: eleni <eleni@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 13:17:51 by eleni             #+#    #+#             */
-/*   Updated: 2025/01/24 13:41:57 by eleni            ###   ########.fr       */
+/*   Updated: 2025/01/24 13:53:33 by eleni            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,5 @@ class MutantStack : public std::stack<T>
         iterator begin();
         iterator end();
 };
+
+#include "MutantStack.tpp"

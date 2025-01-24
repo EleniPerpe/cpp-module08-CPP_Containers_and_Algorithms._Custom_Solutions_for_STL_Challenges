@@ -6,7 +6,7 @@
 /*   By: eleni <eleni@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 13:37:53 by eleni             #+#    #+#             */
-/*   Updated: 2025/01/24 13:43:10 by eleni            ###   ########.fr       */
+/*   Updated: 2025/01/24 13:54:04 by eleni            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,11 @@ MutantStack<T>::~MutantStack() {}
 template <typename T>
 typename MutantStack<T>::iterator MutantStack<T>::begin()
 {
-	return (std::stack<T>::it.begin());
+	return (std::stack<T>::c.begin());
 }
 
 template <typename T>
 typename MutantStack<T>::iterator MutantStack<T>::end()
 {
-	return (std::stack<T>::it.end());
+	return (std::stack<T>::c.end());
 }
