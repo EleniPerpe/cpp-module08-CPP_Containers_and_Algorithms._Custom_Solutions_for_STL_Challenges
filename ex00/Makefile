@@ -1,39 +1,43 @@
-# Source Files
-SRCS = main.cpp
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: eperperi <eperperi@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/11/19 15:07:19 by eperperi          #+#    #+#              #
+#    Updated: 2025/01/27 17:37:58 by eperperi         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
-# Object Files
-OBJS = $(SRCS:.cpp=.o)
+NAME			=	easyFind
 
-# Name Of The Compiled Program
-NAME = easyFind
+CC				=	c++ -g -fsanitize=address
 
-# Compilation Program
-CXX = c++
+CFLAGS			=	-Wall -Werror -Wextra -std=c++11
 
-# Compilation Flags
-CXXFLAGS = -Wall -Wextra -Werror -std=c++11
+SRC_FILES		=	main.cpp
 
-# Remove Files Command
-RM = rm -f
+OBJ_DIR			=	./obj
 
-# Default Target
-all: $(NAME)
+OBJ_FILES		= 	$(SRC_FILES:%.cpp=$(OBJ_DIR)/%.o)
 
-# Linking Target
-$(NAME): $(OBJS)
-	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
+all:	$(NAME)
 
-# Compilation of each .cpp file to .o file
-%.o: %.cpp
-	$(CXX) $(CXXFLAGS) -c $< -o $@
+$(NAME):	$(OBJ_FILES)
+	$(CC) $(CFLAGS) $^ -o $@
 
-# Clean Target
+$(OBJ_DIR):
+	mkdir -p $(OBJ_DIR)
+
+$(OBJ_DIR)/%.o: %.cpp | $(OBJ_DIR)
+	$(CC) $(CFLAGS) -c $< -o $@
+
 clean:
-	$(RM) $(OBJS)
+	rm -rf $(OBJ_DIR)
 
-# Full Clean Target (removes executable too)
-fclean: clean
-	$(RM) $(NAME)
+fclean:	clean
+	rm -f $(NAME)
 
-# Rebuild Everything
-re: fclean all
+re:	fclean all
+
