@@ -1,0 +1,1 @@
+This project demonstrates the implementation of custom C++ containers and algorithms that enhance and extend the functionality of standard containers in the C++ Standard Library. It focuses on developing reusable solutions to common problems like finding elements, managing spans (range differences), and adding iterators to non-iterable containers.
